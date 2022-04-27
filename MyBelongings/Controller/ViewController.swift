@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func pressNextBtn(_ sender: Any) {
+        print("TAPPED!!")
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "home") as? HomeViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 

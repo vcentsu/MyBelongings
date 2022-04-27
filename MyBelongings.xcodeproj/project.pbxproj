@@ -14,6 +14,7 @@
 		D39FB55328197D9B0000D5AB /* MyBelongings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D39FB55128197D9B0000D5AB /* MyBelongings.xcdatamodeld */; };
 		D39FB55528197D9D0000D5AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39FB55428197D9D0000D5AB /* Assets.xcassets */; };
 		D39FB55828197D9D0000D5AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39FB55628197D9D0000D5AB /* LaunchScreen.storyboard */; };
+		D39FB564281990770000D5AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39FB563281990770000D5AB /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D39FB55428197D9D0000D5AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D39FB55728197D9D0000D5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D39FB55928197D9D0000D5AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D39FB563281990770000D5AB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D39FB54C28197D9B0000D5AB /* ViewController.swift */,
+				D39FB563281990770000D5AB /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39FB564281990770000D5AB /* HomeViewController.swift in Sources */,
 				D39FB54D28197D9B0000D5AB /* ViewController.swift in Sources */,
 				D39FB54928197D9B0000D5AB /* AppDelegate.swift in Sources */,
 				D39FB54B28197D9B0000D5AB /* SceneDelegate.swift in Sources */,
