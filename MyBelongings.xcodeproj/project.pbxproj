@@ -60,14 +60,38 @@
 			children = (
 				D39FB54828197D9B0000D5AB /* AppDelegate.swift */,
 				D39FB54A28197D9B0000D5AB /* SceneDelegate.swift */,
-				D39FB54C28197D9B0000D5AB /* ViewController.swift */,
-				D39FB54E28197D9B0000D5AB /* Main.storyboard */,
+				D39FB55F28197DC50000D5AB /* Model */,
+				D39FB56128197DEA0000D5AB /* View */,
+				D39FB56228197DF10000D5AB /* Controller */,
 				D39FB55428197D9D0000D5AB /* Assets.xcassets */,
-				D39FB55628197D9D0000D5AB /* LaunchScreen.storyboard */,
 				D39FB55928197D9D0000D5AB /* Info.plist */,
 				D39FB55128197D9B0000D5AB /* MyBelongings.xcdatamodeld */,
 			);
 			path = MyBelongings;
+			sourceTree = "<group>";
+		};
+		D39FB55F28197DC50000D5AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D39FB56128197DEA0000D5AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D39FB55628197D9D0000D5AB /* LaunchScreen.storyboard */,
+				D39FB54E28197D9B0000D5AB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D39FB56228197DF10000D5AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D39FB54C28197D9B0000D5AB /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
