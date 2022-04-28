@@ -7,6 +7,8 @@
 
 import Foundation
 
+var belongingsData = BelongingsItem()
+
 struct itemData {
     var itemTitle: String?
     var itemType: Bool?
@@ -19,4 +21,12 @@ struct itemData {
         itemCategory = category
         itemDesc = desc
     }
+}
+
+struct BelongingsItem {
+    var item =  [
+        itemData(title: "dummy1", type: false, category: "dummy", desc: "dummy"),
+        itemData(title: "dummy2", type: false, category: "dummy", desc: "dummy"),
+        itemData(title: "dummy3", type: false, category: "dummy", desc: "dummy")
+    ]
 }

@@ -229,6 +229,8 @@ ORGANIZED</string>
                     <navigationItem key="navigationItem" title="My Belongings" largeTitleDisplayMode="always" id="8nC-2N-yiJ"/>
                     <connections>
                         <outlet property="addItemBtn" destination="nwi-fJ-KfY" id="rsr-L6-j0T"/>
+                        <outlet property="homeBg" destination="u3T-jl-saq" id="fhw-t8-dXA"/>
+                        <outlet property="homeDesc" destination="alr-jE-KSl" id="3H9-td-MFM"/>
                         <outlet property="tableView" destination="idc-Y7-cvO" id="EIr-WN-9jg"/>
                     </connections>
                 </viewController>

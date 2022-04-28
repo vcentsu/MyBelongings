@@ -59,17 +59,25 @@ class AddItemViewController: UIViewController {
     
     @IBAction func pressAdd(_ sender: Any) {
         if checkInput(){
-        
+            print("Berhasil")
+            
+            belongingsData.item.append(itemData(
+                title: titleText.text!,
+                type: type,
+                category: selectedCategory,
+                desc: descText.text!)
+            )
+            print(belongingsData)
+            self.dismiss(animated: true)
         }
     }
     
     func checkInput() -> Bool {
 
         let inputTitle = titleText.text
-        let inputType = ""
-        let inputCat = ""
+        let inputType = "Normal"
 
-        if !inputTitle!.isEmpty && !inputType.isEmpty && !inputCat.isEmpty {
+        if !inputTitle!.isEmpty && !inputType.isEmpty {
 
             if selectedCategory != "" {
                 return true
