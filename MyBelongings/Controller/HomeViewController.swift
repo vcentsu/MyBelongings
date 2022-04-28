@@ -7,26 +7,47 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+public var index = 0
 
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var addItemBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
-        //navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.blue]
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.blue]
+        
+        //tableView.isHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func pressAddItem(_ sender: Any) {
+        let addItemVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemID")
+        if let sheet = addItemVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        self.present(addItemVC, animated: true, completion: nil)
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "BelongingsCellID", for: indexPath) as? BelongingsCell)!
+        
+        cell.titleLabel.text = "Wallet"
+        cell.categoryLabel.text = "Wears"
+        cell.typeLabel.text = "Important"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
