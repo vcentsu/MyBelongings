@@ -11,7 +11,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
 
     var pickCategory: String = ""
 
-    var cat = ["🍔 Foods & Drinks", "🚕 Transportation", "🏠 Hotel", "💳 Top up", "🎳 Activity ", "🔍 Others" ]
+    var cat = ["🔌 Electronics", "🧣 Clothes and Wears", "🍔 Foods & Drinks", "🔑 Keys", "🛠 Tools and Equipment", "💊 Medicine", "📦 Others" ]
     
     var selectedIndexes = [[IndexPath.init(row: 0, section: 0)], [IndexPath.init(row: 0, section: 1)]]
     
