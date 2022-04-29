@@ -7,7 +7,7 @@
 
 import UIKit
 
-public var i: Int = belongingsData.item.count - 1
+public var i: Int = 0
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,18 +20,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.blue]
+        //navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.blue]
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBlue]
         
         //tableView.isHidden = true
+        updateView()
         
+    }
+    
+    func updateView() {
         if (i == 0){
             tableView.isHidden = true
             homeBg.isHidden = false
             homeDesc.isHidden = false
         }else{
             tableView.isHidden = false
+            tableView.reloadData()
             homeBg.isHidden = true
             homeDesc.isHidden = true
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMain), name: Notification.Name("updateViewMain"), object: nil)
+    }
+    
+    @objc func updateMain() {
+        i = belongingsData.item.count
+        DispatchQueue.main.async {
+            self.updateView()
         }
     }
     
@@ -45,6 +63,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.present(addItemVC, animated: true, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(80)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return CGFloat(5)
+        }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return belongingsData.item.count
     }
@@ -56,8 +82,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.categoryLabel.text = belongingsData.item[indexPath.row].itemCategory
         if (belongingsData.item[indexPath.row].itemType == true) {
             cell.typeLabel.text = "Important"
+            cell.typeLabel.backgroundColor = .yellow
         }else{
             cell.typeLabel.text = "Normal"
+            cell.typeLabel.backgroundColor = .white
         }
         return cell
     }

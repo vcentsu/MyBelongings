@@ -24,9 +24,11 @@ struct itemData {
 }
 
 struct BelongingsItem {
-    var item =  [
-        itemData(title: "dummy1", type: false, category: "dummy", desc: "dummy"),
-        itemData(title: "dummy2", type: false, category: "dummy", desc: "dummy"),
-        itemData(title: "dummy3", type: false, category: "dummy", desc: "dummy")
-    ]
+//    var item =  [
+//        itemData(title: "", type: false, category: "", desc: ""),
+////        itemData(title: "dummy2", type: false, category: "dummy", desc: "dummy"),
+////        itemData(title: "dummy3", type: false, category: "dummy", desc: "dummy")
+//    ]
+    
+    var item = [itemData]()
 }
